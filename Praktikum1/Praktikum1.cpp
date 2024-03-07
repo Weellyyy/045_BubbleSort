@@ -68,9 +68,9 @@ void display() {
 }
 
 int main() {
-    input();
-    bubbleSortArray();
-    display();
+    input(); //call the input function to get user input
+    bubbleSortArray(); //call the selection sort function
+    display(); //display the sorted array
     system("pause");
 
     return 0;
