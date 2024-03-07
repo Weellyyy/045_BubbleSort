@@ -13,6 +13,7 @@ void input() {
         else {
             cout << "\nArray hanya dapat menampung 20 elemen\n";
         }
+    }
         cout << endl;
         cout << "=================\n";
         cout << "Masukkan Elemen Array\n";
@@ -23,6 +24,24 @@ void input() {
             cin >> arr[i];
         }
 
+}
+
+    void bubbleSortArray() {
+        int pass = 1;
+        do {
+            for (int j = 0; j <= n - 1 - pass; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+            pass = pass + 1;
+
+            cout << "\nPass " << pass - 2 << ": ";
+            for (int k = 0; k < n; k++) {
+                cout << arr[k] << "";
+            }
+            cout << endl;
+        } while (pass <= n - 1);
     }
-
-
